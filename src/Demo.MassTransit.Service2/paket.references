@@ -1,0 +1,11 @@
+GreenPipes
+MassTransit
+MassTransit.RabbitMQ
+MassTransit.SerilogIntegration
+NewId
+Newtonsoft.Json
+RabbitMQ.Client
+Serilog
+Serilog.Sinks.Literate
+Topshelf
+Topshelf.Serilog
