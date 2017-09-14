@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Saga", "Demo.MassTransit.Saga/Demo.MassTransit.Saga.csproj", "{BA389971-1617-4357-9454-62788D916F48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{0B1626A9-A67D-468C-9720-C15D0971B188}"
+ProjectSection(SolutionItems) = preProject
+	..\paket.dependencies = ..\paket.dependencies
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Messages", "Demo.MassTransit.Messages\Demo.MassTransit.Messages.csproj", "{9463713E-9AD6-4006-985D-BB9590E2B890}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Saga.Counter", "Demo.MassTransit.Saga.Counter\Demo.MassTransit.Saga.Counter.csproj", "{CA8A60DF-3F14-4DF4-A147-82A7F5CD8696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Saga.Barista", "Demo.MassTransit.Saga.Barista\Demo.MassTransit.Saga.Barista.csproj", "{7037BD74-31A0-4770-9293-A45567D560F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Saga.Cashier", "Demo.MassTransit.Saga.Cashier\Demo.MassTransit.Saga.Cashier.csproj", "{6FDF5AA7-F81C-4A0F-8B2B-A803B29DE501}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA389971-1617-4357-9454-62788D916F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA389971-1617-4357-9454-62788D916F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA389971-1617-4357-9454-62788D916F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA389971-1617-4357-9454-62788D916F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9463713E-9AD6-4006-985D-BB9590E2B890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9463713E-9AD6-4006-985D-BB9590E2B890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9463713E-9AD6-4006-985D-BB9590E2B890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9463713E-9AD6-4006-985D-BB9590E2B890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8A60DF-3F14-4DF4-A147-82A7F5CD8696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8A60DF-3F14-4DF4-A147-82A7F5CD8696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8A60DF-3F14-4DF4-A147-82A7F5CD8696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8A60DF-3F14-4DF4-A147-82A7F5CD8696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7037BD74-31A0-4770-9293-A45567D560F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7037BD74-31A0-4770-9293-A45567D560F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7037BD74-31A0-4770-9293-A45567D560F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7037BD74-31A0-4770-9293-A45567D560F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDF5AA7-F81C-4A0F-8B2B-A803B29DE501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDF5AA7-F81C-4A0F-8B2B-A803B29DE501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDF5AA7-F81C-4A0F-8B2B-A803B29DE501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDF5AA7-F81C-4A0F-8B2B-A803B29DE501}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

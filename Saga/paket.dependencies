@@ -1,0 +1,15 @@
+source https://api.nuget.org/v3/index.json
+
+framework: auto-detect
+redirects: on
+
+nuget MassTransit
+nuget MassTransit.RabbitMQ
+nuget MassTransit.SerilogIntegration
+nuget MassTransit.Automatonymous
+nuget Newtonsoft.Json < 10
+nuget Topshelf
+nuget Topshelf.Serilog
+nuget Serilog.Sinks.Literate
+nuget Serilog.Sinks.Seq
+nuget MassTransit.RavenDbIntegration

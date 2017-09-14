@@ -1,0 +1,4 @@
+MassTransit.RabbitMQ
+MassTransit.SerilogIntegration
+Serilog
+Serilog.Sinks.Seq
