@@ -3,11 +3,11 @@ using System.Threading.Tasks;
 using MassTransit;
 using MassTransit.Util;
 
-namespace Demo.MassTransit.Saga.Cashier
+namespace Demo.MassTransit.Saga.Customer
 {
     internal class Program
     {
-        internal static void Main()
+        public static void Main()
         {
             var bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
@@ -16,7 +16,7 @@ namespace Demo.MassTransit.Saga.Cashier
                     h.Username("prognet");
                     h.Password("skillsmatter");
                 });
-                cfg.ReceiveEndpoint(host, "cafe.cashier", ep =>
+                cfg.ReceiveEndpoint(host, "cafe.counter", ep =>
                 {
 
                 });
@@ -28,7 +28,6 @@ namespace Demo.MassTransit.Saga.Cashier
 
         private static async Task Work(IBusControl bus)
         {
-            
         }
     }
 }

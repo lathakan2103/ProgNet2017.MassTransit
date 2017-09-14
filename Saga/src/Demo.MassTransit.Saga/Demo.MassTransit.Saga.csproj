@@ -41,6 +41,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.MassTransit.Messages\Demo.MassTransit.Messages.csproj">
+      <Project>{9463713e-9ad6-4006-985d-bb9590e2b890}</Project>
+      <Name>Demo.MassTransit.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -214,8 +220,39 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.6.1'">
       <ItemGroup>
+        <Reference Include="Microsoft.CSharp">
+          <Paket>True</Paket>
+        </Reference>
+        <Reference Include="System">
+          <Paket>True</Paket>
+        </Reference>
+        <Reference Include="System.Core">
+          <Paket>True</Paket>
+        </Reference>
+        <Reference Include="Serilog.Sinks.Console">
+          <HintPath>..\..\packages\Serilog.Sinks.Console\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.6.1'">
+      <ItemGroup>
         <Reference Include="Serilog.Sinks.File">
           <HintPath>..\..\packages\Serilog.Sinks.File\lib\net45\Serilog.Sinks.File.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.6.1'">
+      <ItemGroup>
+        <Reference Include="Serilog.Sinks.Literate">
+          <HintPath>..\..\packages\Serilog.Sinks.Literate\lib\net45\Serilog.Sinks.Literate.dll</HintPath>
           <Private>True</Private>
           <Paket>True</Paket>
         </Reference>
@@ -258,12 +295,6 @@
   <Choose>
     <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.6.1'">
       <ItemGroup>
-        <Reference Include="System">
-          <Paket>True</Paket>
-        </Reference>
-        <Reference Include="System.Core">
-          <Paket>True</Paket>
-        </Reference>
         <Reference Include="mscorlib">
           <Paket>True</Paket>
         </Reference>

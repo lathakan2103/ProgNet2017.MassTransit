@@ -4,3 +4,4 @@ MassTransit.SerilogIntegration
 MassTransit.RavenDbIntegration
 Serilog
 Serilog.Sinks.Seq
+Serilog.Sinks.Literate

@@ -47,6 +47,12 @@
   <ItemGroup>
     <Content Include="paket.references" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.MassTransit.Messages\Demo.MassTransit.Messages.csproj">
+      <Project>{9463713e-9ad6-4006-985d-bb9590e2b890}</Project>
+      <Name>Demo.MassTransit.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -11,7 +11,6 @@ namespace Demo.MassTransit.Saga.Barista
         {
             var bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                cfg.UseSerilog();
                 var host = cfg.Host(new Uri("rabbitmq://localhost/prognet"), h =>
                 {
                     h.Username("prognet");
