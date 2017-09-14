@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit", "Demo.Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Messages", "Demo.MassTransit.Messages\Demo.MassTransit.Messages.csproj", "{9463713E-9AD6-4006-985D-BB9590E2B890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MassTransit.Client", "Demo.MassTransit.Client\Demo.MassTransit.Client.csproj", "{5CA7C612-8262-4EB1-A81D-3EF701D695C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{9463713E-9AD6-4006-985D-BB9590E2B890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9463713E-9AD6-4006-985D-BB9590E2B890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9463713E-9AD6-4006-985D-BB9590E2B890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA7C612-8262-4EB1-A81D-3EF701D695C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA7C612-8262-4EB1-A81D-3EF701D695C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA7C612-8262-4EB1-A81D-3EF701D695C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA7C612-8262-4EB1-A81D-3EF701D695C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
