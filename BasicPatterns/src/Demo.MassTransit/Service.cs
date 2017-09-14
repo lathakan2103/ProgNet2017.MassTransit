@@ -13,10 +13,10 @@ namespace Demo.MassTransit
             _bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
                 cfg.UseSerilog();
-                cfg.Host(new Uri("rabbitmq://localhost"), h =>
+                cfg.Host(new Uri("rabbitmq://localhost/prognet"), h =>
                 {
-                    h.Username("guest");
-                    h.Password("guest");
+                    h.Username("prognet");
+                    h.Password("skillsmatter");
                 });
             });
         }
