@@ -2,6 +2,7 @@ MassTransit.RabbitMQ
 MassTransit.Automatonymous
 MassTransit.SerilogIntegration
 MassTransit.RavenDbIntegration
+MassTransit.Quartz
 Serilog
 Serilog.Sinks.Seq
 Serilog.Sinks.Literate

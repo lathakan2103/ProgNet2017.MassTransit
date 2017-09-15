@@ -23,7 +23,8 @@ namespace Demo.MassTransit.Saga
             var bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
                 cfg.UseSerilog();
-                var host = cfg.Host(new Uri("rabbitmq://localhost/prognet"), h =>
+                
+                var host = cfg.Host(new Uri("rabbitmq://10.211.55.10/prognet"), h =>
                 {
                     h.Username("prognet");
                     h.Password("skillsmatter");
@@ -32,6 +33,9 @@ namespace Demo.MassTransit.Saga
                 {
                     ep.StateMachineSaga(machine, repository);
                 });
+                
+                cfg.UseInMemoryOutbox();
+                cfg.UseInMemoryScheduler();
             });
             
             bus.Start();
