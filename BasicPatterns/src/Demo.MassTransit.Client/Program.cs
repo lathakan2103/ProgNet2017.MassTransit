@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Demo.MassTransit.Messages;
 using MassTransit;
+using MassTransit.Context;
 using MassTransit.Util;
 
 namespace Demo.MassTransit.Client
@@ -18,15 +21,24 @@ namespace Demo.MassTransit.Client
 
         private static async Task Work()
         {
-            //Log.Information("Now we are going to send stuff");
-            var endpoint = await _bus.GetSendEndpoint(
-                new Uri("rabbitmq://10.211.55.10/prognet/test"));
-            
-            await endpoint.Send<HelloWorld>(new {Text = "Hi there"});
-            
-            Console.WriteLine("Sent stuff");
+            await _bus.StartAsync();
+
+            var requestClient = new MessageRequestClient<HelloWorld, HelloResponse>(
+                _bus,
+                new Uri("rabbitmq://10.211.55.10/prognet/test"),
+                TimeSpan.FromMinutes(10));
+
+            await Task.WhenAll(Enumerable.Range(0, 1000).Select(
+                async x =>
+                {
+                    var response = await requestClient.Request(
+                        new HelloWorld {Text = "Hi there"},
+                        CancellationToken.None);
+
+                    Console.WriteLine(response.AmendedText);
+                }).ToArray());
         }
-        
+
         private static IBusControl ConfigureBus() =>
             Bus.Factory.CreateUsingRabbitMq(cfg =>
             {

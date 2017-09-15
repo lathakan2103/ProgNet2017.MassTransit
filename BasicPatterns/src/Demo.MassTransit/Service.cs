@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Demo.MassTransit.Messages;
+using GreenPipes;
 using MassTransit;
 using MassTransit.Util;
 using Serilog;
@@ -29,8 +30,14 @@ namespace Demo.MassTransit
                 });
                 cfg.ReceiveEndpoint(host, "test", ep =>
                 {
-                    ep.Handler<HelloWorld>(async c => 
-                        Console.WriteLine(c.Message.Text));
+                    ep.Consumer(() => new HelloWorldConsumer("Hahaha"),
+                        cm => cm.Message<HelloWorld>(k => 
+                            k.UseDelayedRedelivery(r => r.Immediate(1))));
+                    ep.UseRetry(r =>
+                    {
+                        r.Handle<Exception>();
+                        r.Immediate(5);
+                    });
                 });
             });
             TaskUtil.Await(() => DoWork());
