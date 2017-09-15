@@ -45,6 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App.config" />
     <Content Include="paket.references" />
   </ItemGroup>
   <ItemGroup>

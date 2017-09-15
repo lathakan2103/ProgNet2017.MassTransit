@@ -13,3 +13,4 @@ nuget Topshelf.Serilog
 nuget Serilog.Sinks.Literate
 nuget Serilog.Sinks.Seq
 nuget MassTransit.RavenDbIntegration
+nuget System.Net.Http

@@ -5,3 +5,4 @@ MassTransit.RavenDbIntegration
 Serilog
 Serilog.Sinks.Seq
 Serilog.Sinks.Literate
+System.Net.Http
